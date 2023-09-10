@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar fixed z-10 bg-primary text-white">
+    <div className="navbar fixed max-h-1 z-10 bg-primary text-white">
       <div className="containerWrap">
         <div className="navbar w-full">
           <img src="../../public/chat.png" alt="chat" className="mr-1" />

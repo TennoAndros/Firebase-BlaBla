@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import {
   GoogleAuthProvider,
+  FacebookAuthProvider,
   onAuthStateChanged,
   signInWithRedirect,
   signOut,
@@ -19,12 +20,18 @@ export const AuthProvider = ({ children }) => {
     signInWithRedirect(auth, provider);
   };
 
+  const signinWithFacebook = () => {
+    const provider = new FacebookAuthProvider();
+    signInWithRedirect(auth, provider);
+  };
+
   const logout = () => signOut(auth);
 
   const value = {
     currentUser,
     setCurrentUser,
     signinWithGoogle,
+    signinWithFacebook,
     logout,
   };
 
@@ -40,9 +47,7 @@ export const AuthProvider = ({ children }) => {
     <AuthContext.Provider value={value}>
       {loading ? (
         <div className="flex justify-center items-center h-screen">
-          <span className="loading loading-spinner text-primary">
-            Loading
-          </span>
+          <span className="loading loading-spinner text-primary">Loading</span>
         </div>
       ) : (
         children

@@ -7,20 +7,22 @@ import { AuthProvider } from "./context/AuthContext";
 
 function App() {
   return (
-    <AuthProvider>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route
-          path="/chat"
-          element={
-            <PrivateRoute>
-              <ChatRoom />
-            </PrivateRoute>
-          }
-        />
-      </Routes>
-    </AuthProvider>
+    <main style={{ fontFamily: "Avenir" }}>
+      <AuthProvider>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route
+            path="/chat"
+            element={
+              <PrivateRoute>
+                <ChatRoom />
+              </PrivateRoute>
+            }
+          />
+        </Routes>
+      </AuthProvider>
+    </main>
   );
 }
 
