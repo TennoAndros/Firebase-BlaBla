@@ -7,10 +7,7 @@ export default defineConfig({
   build: {
     chunkSizeWarningLimit: 1600,
   },
-  server: {
-    hmr: {
-      protocol: "ws",
-      changeOrigin: true,
-    },
+  preview: {
+    port: 8080,
   },
 });
