@@ -2,6 +2,205 @@
 @tailwind components;
 @tailwind utilities;
 
-.containerWrap {
-  @apply container mx-auto max-w-4xl;
+.ce-wrapper {
+  display: flex;
+  flex-flow: column;
+  height: 93vh;
+  background-color: #414558 !important;
+}
+.ce-chat-engine {
+  background-color: #414558 !important;
+}
+.ce-chat-list-column {
+  width: 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.ce-chat-feed-column {
+  width: 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  background-color: #414558 !important;
+}
+
+.ce-settings-column {
+  width: 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.ce-settings-container {
+  border: none !important;
+}
+
+.ce-chat-list {
+  height: 100%;
+  max-height: 100vh;
+  overflow: auto;
+}
+
+.ce-chat-feed-column {
+  position: relative;
+}
+
+.ce-ice-breaker {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ce-message-images-row {
+  background-color: #414558 !important;
+}
+
+.ce-message-files-row {
+  background-color: #414558 !important;
+}
+
+.ce-message-files-row div:first-child {
+  color: white !important;
+  border: 1px solid #bf95f9 !important;
+}
+
+.ce-message-files-row[role="img"] {
+  background-color: #bf95f9;
+}
+
+.anticon svg {
+  display: block !important;
+}
+
+.ce-chat-form-container {
+  background-color: #414558 !important;
+}
+
+.ce-settings {
+  background-color: #414558 !important;
+}
+
+.ce-primary-button {
+  background-color: #bf95f9 !important;
+}
+
+.ce-chat-list {
+  background-color: #414558 !important;
+  color: white;
+}
+.ce-chats-container {
+  background-color: #414558 !important;
+  color: white;
+}
+.ce-chat-card.ce-active-chat-card {
+  background-color: #bf95f9 !important;
+  border-radius: 2px !important;
+}
+
+.ce-chat-title-text {
+  color: white !important;
+}
+
+.ce-chat-subtitle-text {
+  color: #ff7ac6;
+}
+
+.ce-chat-subtitle-text.ce-chat-subtitle-message {
+  color: white !important;
+}
+
+.ce-chat-subtitle-text.ce-chat-subtitle-date {
+  color: white !important;
+}
+
+.ce-chat-unread-dot {
+  background-color: #ffb86b !important;
+}
+
+.ce-chat-feed-container {
+  background-color: #414558 !important;
+}
+
+.ce-chat-title-container {
+  background-color: #414558 !important;
+}
+
+.ql-editor.ql-blank {
+  background-color: #414558 !important;
+}
+
+#ce-send-message-button {
+  background-color: #bf95f9 !important;
+}
+
+#toolbar {
+  background-color: #ff7ac6;
+  color: white;
+}
+
+.ql-editor {
+  background-color: #414558 !important;
+}
+
+.ce-message-bubble.ce-my-message-bubble.false {
+  background-color: #ffb86b !important;
+}
+
+.ce-message-date-text {
+  color: #bf95f9 !important;
+}
+
+.ce-my-message-sinding-bubble {
+  background-color: #ffb86b !important;
+}
+
+.ce_message {
+  color: black !important;
+}
+
+.ce-message-timestamp.ce-my-message-timestamp {
+  color: #ff7ac6 !important;
+}
+
+.ce-input {
+  background-color: #ff7ac6 !important;
+  border-radius: 2px !important;
+}
+
+.ce-section-title-container.ce-person-title-container {
+  background-color: #bf95f9 !important;
+  border-radius: 2px;
+}
+
+.ce-section-title-container.ce-photo-title-container {
+  background-color: #bf95f9 !important;
+  border-radius: 2px;
+}
+
+#ce-options-drop-down {
+  background-color: #bf95f9 !important;
+  border-radius: 2px;
+}
+
+#ce-add-username-input::placeholder {
+  color: #dbdbdb;
+}
+
+.ce-quill-container {
+  background-color: #414558 !important;
+}
+
+.ql-tooltip.ql-editing.ql-flip {
+  background-color: #ff7ac6 !important;
+  color: white;
+}
+
+.ql-action {
+  color: white !important;
+}
+
+.body {
+  margin: 0;
 }
