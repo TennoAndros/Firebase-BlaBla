@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import ChatRoom from "./pages/ChatRoom";
-import Login from "./pages/Login";
+import Chat from "./components/Chat";
+import Login from "./components/Login";
 import PrivateRoute from "./routes/PrivateRoute";
 import { AuthProvider } from "./context/AuthContext";
 
@@ -16,7 +16,7 @@ function App() {
             path="/chat"
             element={
               <PrivateRoute>
-                <ChatRoom />
+                <Chat />
               </PrivateRoute>
             }
           />

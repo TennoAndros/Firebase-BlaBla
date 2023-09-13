@@ -6,13 +6,14 @@ import {
   signInWithRedirect,
   signOut,
 } from "firebase/auth";
+
 import { auth } from "../Firebase";
 import PropTypes from "prop-types";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState(null);
+  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
   const signinWithGoogle = () => {
@@ -27,21 +28,21 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => signOut(auth);
 
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth,(user) => {
+      setUser(user);
+      setLoading(false);
+    });
+    return unsubscribe;
+  }, [user]);
+
   const value = {
-    currentUser,
-    setCurrentUser,
+    user,
+    setUser,
     signinWithGoogle,
     signinWithFacebook,
     logout,
   };
-
-  useEffect(() => {
-    const unsubscibe = onAuthStateChanged(auth, (user) => {
-      setCurrentUser(user);
-      setLoading(false);
-    });
-    return unsubscibe;
-  }, []);
 
   return (
     <AuthContext.Provider value={value}>
@@ -60,6 +61,4 @@ AuthProvider.propTypes = {
   children: PropTypes.array,
 };
 
-export const UserAuth = () => {
-  return useContext(AuthContext);
-};
+export const UseAuth = () => useContext(AuthContext);

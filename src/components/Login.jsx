@@ -1,12 +1,13 @@
 import { useEffect } from "react";
-import { UserAuth } from "../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { UseAuth } from "../context/AuthContext";
+import { useLocation, useNavigate } from "react-router-dom";
 import { BsFacebook } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
-  const { currentUser, signinWithGoogle, signinWithFacebook } = UserAuth();
+  const { user, signinWithGoogle, signinWithFacebook } = UseAuth();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleGoogleLogin = async () => {
     try {
@@ -24,10 +25,13 @@ const Login = () => {
   };
 
   useEffect(() => {
-    if (currentUser) {
-      navigate("/chat");
+    if (user && location) {
+      const currentPath = location.pathname;
+      if (currentPath !== "/chat") {
+        navigate("/chat");
+      }
     }
-  }, [currentUser]);
+  }, [user, location, navigate]);
 
   return (
     <div
@@ -40,7 +44,7 @@ const Login = () => {
       <div className="hero-overlay" />
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">Hello there👋🏻</h1>
+          <h1 className="mb-5 text-5xl font-bold">👋🏻Welcome to BlaBla</h1>
           <p className="mb-5">
             Join the conversation, meet new people, and make connections in one
             shared room.

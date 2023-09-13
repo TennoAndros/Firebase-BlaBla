@@ -1,11 +1,11 @@
 import { Navigate } from "react-router-dom";
 import PropTypes from "prop-types";
-import { UserAuth } from "../context/AuthContext";
+import { UseAuth } from "../context/AuthContext";
 
 export const PrivateRoute = ({ children }) => {
-  const { currentUser } = UserAuth();
+  const { user } = UseAuth();
 
-  if (!currentUser) {
+  if (!user) {
     return <Navigate to="/" replace={true} />;
   }
 
@@ -13,7 +13,7 @@ export const PrivateRoute = ({ children }) => {
 };
 
 PrivateRoute.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.node,
 };
 
 export default PrivateRoute;

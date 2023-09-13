@@ -1,7 +1,7 @@
-import { UserAuth } from "../context/AuthContext";
+import { UseAuth } from "../context/AuthContext";
 
 const Navbar = () => {
-  const { currentUser, logout } = UserAuth();
+  const { user, logout } = UseAuth();
 
   const handleLogout = async () => {
     try {
@@ -12,28 +12,21 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar fixed max-h-1 z-10 bg-primary text-white">
-      <div className="containerWrap">
-        <div className="navbar w-full">
-          <img src="../../public/chat.png" alt="chat" className="mr-1" />
-          <a
-            href="http://localhost:5173/"
-            className="normal-case text-xl font-bold"
-          >
-            BlaBla
-          </a>
-        </div>
-        {currentUser && (
-          <div className="navbar w-auto">
-            <button
-              onClick={handleLogout}
-              className="btn btn-ghost normal-case text-lg rounded-full hover:bg-secondary"
-            >
-              Logout
-            </button>
-          </div>
-        )}
+    <div className="navbar max-h-[66px] bg-primary text-white">
+      <div className="flex-1 ml-2">
+        <img src="./chat.png" alt="chat" className="mr-1" />
+        <div className=" text-3xl font-bold ">BlaBla</div>
       </div>
+      {user && (
+        <div className="flex-none mr-2">
+          <button
+            onClick={handleLogout}
+            className="btn btn-ghost normal-case text-lg rounded-full hover:bg-secondary"
+          >
+            Logout
+          </button>
+        </div>
+      )}
     </div>
   );
 };
