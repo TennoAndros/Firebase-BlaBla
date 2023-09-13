@@ -4,6 +4,10 @@
 
 Welcome to BlaBla Realtime Chat! BlaBla is a modern, feature-rich chat application that allows users to communicate in real-time, create chat rooms, send messages, share images, and exchange files seamlessly. With the convenience of logging in using your Google or Facebook account, BlaBla offers a secure and user-friendly chatting experience.
 
+## Getting Started
+
+To get started with BlaBla Realtime Chat, simply sign in with your Google or Facebook account, and you'll be ready to start chatting with friends and colleagues in no time.
+
 ## Features
 
 ### 1. Google and Facebook Login
@@ -78,7 +82,3 @@ BlaBla Realtime Chat is built using a cutting-edge technology stack to ensure a 
 5. **Daisy UI**: Daisy UI is used for styling and UI components. It helps in creating a visually appealing and user-friendly chat interface.
 
 6. **Tailwind CSS**: Tailwind CSS is employed for efficient and flexible styling. It allows for easy customization and consistent design across the application.
-
-## Getting Started
-
-To get started with BlaBla Realtime Chat, simply sign in with your Google or Facebook account, and you'll be ready to start chatting with friends and colleagues in no time.
