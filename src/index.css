@@ -35,9 +35,10 @@
 }
 
 .ce-chat-list {
-  height: 100%;
-  max-height: 100vh;
+  height: calc(100vh - 66px) !important;
   overflow: auto;
+  background-color: #414558 !important;
+  color: white;
 }
 
 .ce-chat-feed-column {
@@ -80,16 +81,13 @@
 
 .ce-settings {
   background-color: #414558 !important;
+  height: calc(100vh - 66px) !important;
 }
 
 .ce-primary-button {
   background-color: #ff7ac6 !important;
 }
 
-.ce-chat-list {
-  background-color: #414558 !important;
-  color: white;
-}
 .ce-chats-container {
   background-color: #414558 !important;
   color: white;
@@ -121,6 +119,7 @@
 
 .ce-chat-feed-container {
   background-color: #414558 !important;
+  height: calc(100vh - 66px) !important;
 }
 
 .ce-chat-title-container {

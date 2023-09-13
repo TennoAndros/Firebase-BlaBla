@@ -62,7 +62,7 @@ const Chat = () => {
     );
 
   return (
-    <div className="absolute w-full h-[calc(100vh-66px)]">
+    <div className="absolute w-full">
       <div className="h-full bg-secondary">
         <ChatEngine
           projectID={import.meta.env.VITE_CHAT_ENGINE_ID}
