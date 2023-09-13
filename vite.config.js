@@ -6,6 +6,9 @@ export default defineConfig({
   plugins: [react()],
   build: {
     chunkSizeWarningLimit: 1600,
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    },
   },
   preview: {
     port: 8080,
