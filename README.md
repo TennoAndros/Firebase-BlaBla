@@ -8,6 +8,10 @@ Welcome to BlaBla Realtime Chat! BlaBla is a modern, feature-rich chat applicati
 
 To get started with BlaBla Realtime Chat, simply sign in with your Google or Facebook account, and you'll be ready to start chatting with friends and colleagues in no time.
 
+## Link to Deployed Version
+
+You can access the deployed version of BlaBla [here](https://realtime-chat-blabla.netlify.app/).
+
 ## Features
 
 ### 1. Google and Facebook Login
