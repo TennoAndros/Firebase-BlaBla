@@ -12,7 +12,7 @@ To get started with BlaBla Realtime Chat, simply sign in with your Google or Fac
 
 You can access the deployed version of BlaBla [here](https://realtime-chat-blabla.netlify.app/).
 
-***AdBlock might prevent you from logging in disable it for full experience***
+***AdBlock might prevent you from logging in, disable it for full experience***
 
 ## Features
 
